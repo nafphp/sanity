@@ -1,0 +1,25 @@
+{
+    "name": "nixphp/sanity",
+    "description": "A small monitoring helper with customizable actions",
+    "type": "nixphp-plugin",
+    "require-dev": {
+        "phpunit/phpunit": "^13.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NixPHP\\Sanity\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Flo Knapp",
+            "email": "office@florianknapp.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "suggest": {
+        "nixphp/cli": "^v0.1.2"
+    },
+    "require": {}
+}

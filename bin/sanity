@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+CALLER_DIR="$(pwd)"
+SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd -P)"
+PROJECT_ROOT="$(cd -- "${SCRIPT_DIR}/.." && pwd -P)"
+RUN_FILE="${PROJECT_ROOT}/run.php"
+
+if [[ ! -f "${RUN_FILE}" ]]; then
+  echo "Error: Could not find run.php at ${RUN_FILE}" >&2
+  exit 1
+fi
+
+# Use the caller's execution directory as current working directory.
+cd -- "${CALLER_DIR}"
+
+exec php "${RUN_FILE}" "$@"
