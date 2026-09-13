@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NixPHP\Sanity\Actions;
+namespace Naf\Sanity\Actions;
 
 interface ActionInterface
 {

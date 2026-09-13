@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace NixPHP\Sanity\Actions;
+namespace Naf\Sanity\Actions;
 
 class DemoAction implements ActionInterface
 {
 
-    public const string NAME = 'nixphp:demo';
+    public const string NAME = 'naf:demo';
 
      public function isDue(): bool
      {

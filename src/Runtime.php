@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NixPHP\Sanity;
+namespace Naf\Sanity;
 
-use NixPHP\Sanity\Actions\ActionInterface;
+use Naf\Sanity\Actions\ActionInterface;
 
 class Runtime
 {
@@ -24,7 +24,7 @@ class Runtime
             return !str_contains($action, 'ActionInterface');
         });
 
-        $namespace = 'NixPHP\Sanity\Actions';
+        $namespace = 'Naf\Sanity\Actions';
 
         foreach ($actions as $action) {
             $res = str_replace(__DIR__ . '/Actions/', '', $action);
