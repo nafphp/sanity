@@ -58,3 +58,7 @@ runtime behavior, but do not claim a currently nonexistent suite passed.
 
 This repository's [README](README.md) is currently a short description. Document implemented
 behavior and configuration before presenting new monitoring features as available.
+
+Follow the shared [PHP code style](https://github.com/nafphp/docs/blob/main/CODE_STYLE.md)
+and `.php-cs-fixer.dist.php`. Run `composer style:check`; `composer style:fix` applies the rules.
+Keep logical steps and local names readable, preserving public signatures and template output.

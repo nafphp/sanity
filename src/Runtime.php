@@ -8,7 +8,6 @@ use Naf\Sanity\Actions\ActionInterface;
 
 class Runtime
 {
-
     private array $actions = [];
 
     public function run(): void
@@ -36,5 +35,4 @@ class Runtime
             }
         }
     }
-
 }
