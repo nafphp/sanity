@@ -11,5 +11,4 @@ interface ActionInterface
     public function isDue();
 
     public function execute();
-
 }

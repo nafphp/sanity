@@ -17,9 +17,15 @@ verified documentation-only changes can be merged and published by the agent.
 
 `naf/sanity` is an early monitoring/action prototype. Its manifest declares `naf-plugin`, but
 the tracked bootstrap does not register a NAF service or helper. The manifest currently has
-no runtime requirements and no Composer scripts; do not infer PHP support or a published,
+no runtime requirements and no test or analysis scripts; do not infer PHP support or a published,
 complete monitoring API from the package type. Verify installation availability before
 recommending it to users.
+
+The validator/converter draft in `src/Traits/` and `src/functions.php` is saved work in
+progress. The traits are not integrated into `Runtime`, and `sanity()` still references a
+missing `Sanity` class. Composer does not autoload that function. Preserve the draft without
+presenting it as a usable validation API; it needs implementation and behavioral tests before
+merging into the supported runtime.
 
 ## Use and inspect the prototype
 
@@ -58,3 +64,7 @@ runtime behavior, but do not claim a currently nonexistent suite passed.
 
 This repository's [README](README.md) is currently a short description. Document implemented
 behavior and configuration before presenting new monitoring features as available.
+
+Follow the shared [PHP code style](https://github.com/nafphp/docs/blob/main/CODE_STYLE.md)
+and `.php-cs-fixer.dist.php`. Run `composer style:check`; `composer style:fix` applies the rules.
+Keep logical steps and local names readable, preserving public signatures and template output.
